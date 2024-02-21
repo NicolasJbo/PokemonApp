@@ -8,13 +8,15 @@
     border: 1px solid black ;
     margin: 5px;
 }
-.title{
+.title{align-items: center;
     font-size: larger;
     font-weight: 800;
     color: black;
     border-radius: 4%;
     border: 1px solid;
     padding: 5px;
+    display: flex;
+    justify-content: space-around;
     margin: 5px;
     box-shadow: 1px 0px 30px 14px rgba(25,24,24,0.4) inset;
     -webkit-box-shadow: 1px 0px 30px 14px rgba(25,24,24,0.4) inset;
