@@ -8,7 +8,7 @@ export default function PokeCard({name='',id='',img='',type=''}){
   const getColor = (condicion) => {
     if (condicion === 'earth') {
       return 'var(--type-color-earth)';
-    } else if (condicion === 'ligth') {
+    } else if (condicion === 'electric') {
       return 'var(--type-color-ligth)';
     } else if (condicion === 'water') {
       return 'var(--type-color-water)';

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './SearchInput.css'
 
-export default function SearchInput(){
+export default function SearchInput({search}){
 
     const [inputValue,setInputValue] = useState('');
 
@@ -15,6 +15,7 @@ export default function SearchInput(){
            return;
         }else {
         setInputValue('');
+        search(inputValue);
         }
     }
 
