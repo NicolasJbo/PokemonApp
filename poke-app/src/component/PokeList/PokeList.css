@@ -1,0 +1,27 @@
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 4 columnas de igual ancho */
+    gap: 10px; /* Espacio entre celdas */
+    
+  }
+
+  .grid-item {
+    border: 1px ;
+    padding: 10px;
+    width: 214px;
+
+  }
+
+  /* Media query para hacer responsive */
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en dispositivos más pequeños */
+    }
+  }
+  body{
+    background-color: grey !important;
+  }
+  .cards{
+    width: 214px;
+  }
