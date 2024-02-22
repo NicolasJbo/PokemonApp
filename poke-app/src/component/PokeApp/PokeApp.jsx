@@ -7,25 +7,30 @@ import { usePokeFetch } from '../../utils/Hooks/usePokeFetch';
 
 export default function PokeApp(){
 
-    const { pokemons, isLoading ,getPokeEvolution} = usePokeFetch();
+    const { pokemons, isLoading ,onError,getPokeEvolution} = usePokeFetch();
+    const[user,setUser]=useState('Nico');
 
     async function handleSearch(name){    
         await getPokeEvolution(name);
-        console.log("Input  ",pokemons);
     }
 
 
     return(
         <>
           <div className="searach">
-                <h2>Search a Pokemon</h2>
-                <SearchInput search={((name)=>handleSearch(name))} ></SearchInput>
+                <h2 className='title-landing'>Search Pokemon Evolutions</h2>
+                <h3 className='user'>Bienvenido :{user}!</h3>
+                <SearchInput search={handleSearch} ></SearchInput>
             </div>
             
             <div className="container">
-                Pokemon Evolution
+                 <h2>Pokemon Evolution</h2>
+                {
+                   isLoading && <h2>Loading...</h2> 
+                }
+
                 { pokemons &&
-                <PokeList pokemon={pokemons}></PokeList>
+                    <PokeList pokemon={pokemons}></PokeList>
                 }
                 
              </div>

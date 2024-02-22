@@ -21,6 +21,7 @@ export default function SearchInput({search}){
 
     return(
         <>
+
             <form onSubmit={handleSubmit}>
                 <input type="search" onChange={handleChange} placeholder="Enter a Pokemon to search" value={inputValue} />
             </form>

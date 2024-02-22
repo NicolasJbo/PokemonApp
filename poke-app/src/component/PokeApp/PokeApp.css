@@ -1,0 +1,9 @@
+.title-landing{
+    display: inline ;
+}
+.user{
+    display: inline;
+    position: absolute;
+    top: -11px;
+    right: 90px;
+}

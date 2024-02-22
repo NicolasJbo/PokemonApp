@@ -8,7 +8,8 @@
     border: 1px solid black ;
     margin: 5px;
 }
-.title{align-items: center;
+.title{
+    align-items: center;
     font-size: larger;
     font-weight: 800;
     color: black;

@@ -2,5 +2,6 @@ input{
     width: 80%;
     padding: 6px;
     margin: 6px;
-    color: white;
+    color: black;
+    border-radius: 5%;
 }

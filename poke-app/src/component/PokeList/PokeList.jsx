@@ -5,19 +5,12 @@ import './PokeList.css'
 
 
 
-export default function PokeList(props){
-    const [pokemons,setPokemons]=useState(props.pokemon);
-    console.log("List ",pokemons)
+export default function PokeList({pokemon}){
     return (
         <>
-                <div className="grid-container">
-                  
-                     
-                        <div key= {pokemons.base.name}class="card-Evo">
-                            <PokeCard poke={pokemons} className='cards'/>
-                        </div>
-                
-                </div>
+            <div key= {pokemon.base.name}className="card-Evo">
+                <PokeCard poke={pokemon} className='cards'/>
+            </div>
         </>
     );
 }
