@@ -16,6 +16,9 @@
   --type-color-fire:rgba(216, 73, 73, 0.966);
   --type-color-psychic:#ec3c7c;
 }
+body{
+  background-color: rgb(167, 170, 172);
+}
 .container{
   width:95vw;
   height: 80vh;

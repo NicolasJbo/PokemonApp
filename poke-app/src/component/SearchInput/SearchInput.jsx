@@ -3,7 +3,7 @@ import './SearchInput.css'
 
 export default function SearchInput({search}){
 
-    const [inputValue,setInputValue] = useState('');
+    const [inputValue,setInputValue] = useState('pikachu');
 
     function handleChange(event){
         setInputValue(event.target.value);
@@ -14,7 +14,7 @@ export default function SearchInput({search}){
             alert('mas de 1 caracter')
            return;
         }else {
-        setInputValue('');
+        setInputValue('pikachu');
         search(inputValue);
         }
     }

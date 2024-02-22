@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './PokeApp.css'
 import PokeList from "../PokeList/PokeList";
 import SearchInput from "../SearchInput/SearchInput";
@@ -7,20 +7,12 @@ import { usePokeFetch } from '../../utils/Hooks/usePokeFetch';
 
 export default function PokeApp(){
 
-    const[pokes,setPokemons] = useState();
-    const { pokemons, isLoading ,getpokemons} = usePokeFetch();
+    const { pokemons, isLoading ,getPokeEvolution} = usePokeFetch();
 
     async function handleSearch(name){    
-        console.log("Buscador-->" ,name)
-        const data = await getpokemons(name);
-        console.log("pokemons2-->" ,pokemons)
-        setPokemons(pokemons);
-
-
-    
-
+        await getPokeEvolution(name);
+        console.log("Input  ",pokemons);
     }
-
 
 
     return(
@@ -31,8 +23,8 @@ export default function PokeApp(){
             </div>
             
             <div className="container">
-                Pokemons List
-                { pokes &&
+                Pokemon Evolution
+                { pokemons &&
                 <PokeList pokemon={pokemons}></PokeList>
                 }
                 

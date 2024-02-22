@@ -1,11 +1,10 @@
-.grid-container {
+ .grid-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 4 columnas de igual ancho */
-    gap: 10px; /* Espacio entre celdas */
+   
     
   }
-
+/*
   .grid-item {
     border: 1px ;
     padding: 10px;
@@ -13,10 +12,10 @@
 
   }
 
-  /* Media query para hacer responsive */
+
   @media screen and (max-width: 768px) {
     .grid-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas en dispositivos más pequeños */
+      grid-template-columns: repeat(2, 1fr)
     }
   }
   body{
@@ -24,4 +23,9 @@
   }
   .cards{
     width: 214px;
+  }; */
+  .card-Evo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
